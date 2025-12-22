@@ -1,0 +1,171 @@
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.summary-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: center;
+    transition: transform var(--transition-fast);
+    border-left: 4px solid;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.summary-card.primary {
+    border-left-color: var(--color-primary-600);
+}
+
+.summary-card.secondary {
+    border-left-color: var(--color-gold-600);
+}
+
+.summary-card.success {
+    border-left-color: var(--color-success-600);
+}
+
+.summary-card.error {
+    border-left-color: var(--color-error-600);
+}
+
+.card-icon {
+    font-size: var(--font-size-5xl);
+    flex-shrink: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.card-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+}
+
+.card-percent {
+    font-size: var(--font-size-lg);
+    margin-left: var(--spacing-2);
+}
+
+.holdings-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.holdings-section h2 {
+    margin-bottom: var(--spacing-6);
+}
+
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-12) var(--spacing-6);
+    color: var(--color-gray-500);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-4);
+}
+
+.empty-state h3 {
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-2);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.holdings-table thead {
+    background-color: var(--color-gray-100);
+}
+
+.holdings-table th {
+    padding: var(--spacing-4);
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-700);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--color-gray-300);
+}
+
+.holdings-table td {
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
+.holdings-table tbody tr:hover {
+    background-color: var(--color-gray-50);
+}
+
+.product-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+}
+
+.highlight {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-700);
+}
+
+.profit-loss {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    font-weight: var(--font-weight-semibold);
+}
+
+.profit-loss.positive {
+    color: var(--color-success-600);
+}
+
+.profit-loss.negative {
+    color: var(--color-error-600);
+}
+
+.profit-loss .percent {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .holdings-table {
+        font-size: var(--font-size-sm);
+    }
+
+    .holdings-table th,
+    .holdings-table td {
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+}

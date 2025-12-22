@@ -1,0 +1,191 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-8);
+}
+
+.stat-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-5);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    transition: transform var(--transition-fast);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+}
+
+.stat-value.success {
+    color: var(--color-success-600);
+}
+
+.stat-value.error {
+    color: var(--color-error-600);
+}
+
+.history-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-6);
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+}
+
+.history-header h2 {
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    gap: var(--spacing-3);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: var(--spacing-2);
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-1);
+    border-radius: var(--radius-lg);
+}
+
+.filter-buttons button {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: none;
+    background: none;
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-buttons button.active {
+    background-color: var(--color-primary-600);
+    color: var(--color-white);
+}
+
+.sort-button {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: 2px solid var(--color-gray-300);
+    background-color: var(--color-white);
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sort-button:hover {
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-700);
+}
+
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-12) var(--spacing-6);
+    color: var(--color-gray-500);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-4);
+}
+
+.empty-state h3 {
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-2);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.history-table thead {
+    background-color: var(--color-gray-100);
+}
+
+.history-table th {
+    padding: var(--spacing-3);
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-700);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--color-gray-300);
+    white-space: nowrap;
+}
+
+.history-table td {
+    padding: var(--spacing-3);
+    border-bottom: 1px solid var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
+.history-table tbody tr:hover {
+    background-color: var(--color-gray-50);
+}
+
+.timestamp {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-600);
+    white-space: nowrap;
+}
+
+.product-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+}
+
+.total {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-700);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .history-table {
+        font-size: var(--font-size-xs);
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: var(--spacing-2);
+    }
+}
